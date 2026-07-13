@@ -1,0 +1,136 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: -apple-system,
+BlinkMacSystemFont, "Segoe UI", Roboto,
+Helvetica, Arial, sans-serif;
+}
+body {
+background-color: #F7FAFC;
+color: #2D3748;
+display: flex;
+justify-content: center;
+padding: 15px;
+}
+.app-container {
+width: 100%;
+max-width: 500px; /* Ограничение под
+мобильный экран */
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+/* Кнопки переключения режимов */
+.mode-layout {
+display: flex;
+gap: 8px;
+height: 45px;
+}
+.mode-btn {
+flex: 1;
+border: none;
+border-radius: 8px;
+font-weight: bold;
+cursor: pointer;
+background-color: #E2E8F0;
+color: #4A5568;
+transition: background-color 0.2s;
+}
+.mode-btn.active {
+background-color: #48BB78;
+color: white;
+}
+/* Блок настроек */
+.settings-layout {
+display: flex;
+align-items: center;
+gap: 8px;
+background: white;
+padding: 10px;
+border-radius: 8px;
+border: 1px solid #E2E8F0;
+}
+.settings-layout label {
+font-size: 14px;
+color: #4A5568;
+}
+.settings-layout input {
+flex: 1;
+width: 50px;
+text-align: center;
+padding: 6px;
+border: 1px solid #CBD5E0;
+border-radius: 6px;
+font-size: 14px;
+}
+#btn-restart {
+background-color: #4A5568;
+color: white;
+border: none;
+padding: 8px 16px;
+border-radius: 6px;
+font-weight: bold;
+cursor: pointer;
+}
+/* Статистика */
+.stats-layout {
+display: flex;
+justify-content: space-between;
+font-size: 13px;
+color: #718096;
+}
+.remains-text {
+font-weight: bold;
+color: #DD6B20;
+}
+/* Заголовки вопроса */
+.question-header {
+text-align: center;
+margin: 5px 0;
+}
+.hint-text {
+font-style: italic;
+color: #A0AEC0;
+font-size: 13px;
+margin-bottom: 4px;
+}
+#lbl-item-name {
+font-size: 22px;
+font-weight: bold;
+color: #1A202C;
+word-wrap: break-word;
+}
+/* Сетка ингредиентов (4 колонки) */
+.grid-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 6px;
+margin-top: 5px;
+}
+.ing-btn {
+background-color: #EDF2F7;
+color: #2D3748;
+border: none;
+border-radius: 6px;
+padding: 8px 4px;
+font-size: 10px;
+text-align: center;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+word-break: break-word;
+min-height: 55px;
+transition: background-color 0.15s;
+}
+.ing-btn.correct {
+background-color: #48BB78 !important;
+color: white !important;
+pointer-events: none; /* Отключаем клики
+после угадывания */
+}
+.ing-btn.wrong {
+background-color: #F56565 !important;
+color: white !important;
+}
